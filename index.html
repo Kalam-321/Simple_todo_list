@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="102.js">Browser doesn't parse the upcoming code. Directly executes the js file after loading it. Throws error if the JS file contains HTML elememnts which are not parsed</script> --> 
+    <!-- <script src="102.js" async>Also has chance of getting an error even though parsing of HTML file and loading of JS file takes place simultaneously. Because parsing of rest of the HTML code gets stopped and JS file starts to execute after it is loaded.</script> -->
+    <script src="index.js" defer></script>
+    <!-- Above is the best method to link JS file to an HTML file. Parsing and loading are done simultaneously and parsing continues even after the JS file is loaded. -->
+
+</head>
+<body>
+    <header class="header">
+        <nav class="container nav ">
+            <h1 class="logo">Website</h1>
+            <ul class="list-items">
+                <li class="list-item"><a href="https://www.google.com">Home</a></li>
+                <li class="list-item"><a href="">Todo</a></li>
+                <li class="list-item"><a href="">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="headLine">
+            <h2 id="main-heading">Manage your tasks <span style="display: none;">Hello</span></h2>
+            <button class="btn btn-hLine" >Learn more</button>
+            <!-- onclick="console.log('You clicked me!!!')" Ye oopar add kardo  --> 
+        </div>
+    </header>
+    <section class="todo-section container" >
+        <h2>Your plan for today?</h2>
+        <form class="form-todo">
+            <input type="text" name="" id="" placeholder="Type your task">
+            <input type="submit" value="Add Todo" class="btn">
+        </form>
+        <ul class="todo-list">
+            <!-- <li class="first-todo">todo 1</li> -->
+            <!-- <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+            <li>item 5</li> -->
+            <!-- <li>
+                <span class="text">Do this Do that</span>
+                <div class="todo-buttons">
+                    <button class="todo-btn done">Done</button>
+                    <button class="todo-btn remove">Remove</button>
+                </div>
+            </li> -->
+        </ul>
+    </section>
+    <section class="section-signup container">
+        <h2>Sign Up</h2>
+        <form class="signup-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="form-group">
+                <label for="confirm">Confirm Password</label>
+                <input type="password" name="confirm" id="confirm">
+            </div>
+            <div class="form-group">
+                <label for="username">Phone</label>
+                <input type="number" name="phone" id="phone">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="about">About Yourself</label>
+                <textarea name="about" id="about" cols="30" rows="10"></textarea>
+            </div>
+            <div class="btn-grp">
+                <button type="submit" class="btn signup-btn">Submit</button>
+                 <button type="reset" class="btn signup-btn">Reset</button>
+            </div>
+        </form>
+    </section>
+    <!-- <script src="102.js">It works but is time consuming</script> -->
+</body>
+</html>
